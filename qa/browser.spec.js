@@ -1,6 +1,6 @@
 const { test, expect } = require("playwright/test");
 
-const pageUrl = "http://127.0.0.1:4195/";
+const pageUrl = process.env.PW_PAGE_URL || "http://127.0.0.1:4195/";
 
 test("desktop: valida o checkout único, a galeria e o FAQ", async ({ page }) => {
   const pageErrors = [];
